@@ -3,11 +3,13 @@
 # The files installed by the script conform to the Filesystem Hierarchy Standard:
 # https://wiki.linuxfoundation.org/lsb/fhs
 
-# The URL of the script project is:
+# This script is fork of Xray-install with changed geodata urls.
+
+# The URL of the original script project is:
 # https://github.com/XTLS/Xray-install
 
-# The URL of the script is:
-# https://github.com/XTLS/Xray-install/raw/main/install-release.sh
+# The URL of this (forked) script is:
+# https://github.com/zolg/Xray-install/raw/main/install-release.sh
 
 # If the script executes incorrectly, go to:
 # https://github.com/XTLS/Xray-install/issues
@@ -696,8 +698,8 @@ install_geodata() {
       exit 1
     fi
   }
-  local download_link_geoip="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
-  local download_link_geosite="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+  local download_link_geoip="https://github.com/runetfreedom/russia-v2ray-rules-dat/releases/latest/download/geoip.dat"
+  local download_link_geosite="https://github.com/runetfreedom/russia-v2ray-rules-dat/releases/latest/download/geosite.dat"
   local file_ip='geoip.dat'
   local file_dlc='geosite.dat'
   local file_site='geosite.dat'
