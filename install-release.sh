@@ -709,6 +709,11 @@ install_geodata() {
   download_geodata $download_link_geoip $file_ip
   download_geodata $download_link_geosite $file_dlc
   cd "${dir_tmp}" || exit
+# ugly fix for russia-v2ray-rules-dat sha256sum path bug
+  mkdir publish
+  ln ${file_dlc} ./publish/
+   
+
   for i in "${dir_tmp}"/*.sha256sum; do
     if ! sha256sum -c "${i}"; then
       echo 'error: Check failed! Please check your network or try again.'
